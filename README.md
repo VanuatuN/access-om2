@@ -1,6 +1,15 @@
 <img src="https://github.com/COSIMA/logo/blob/master/png/logo_word.png" width="800"/>
 <br/> <br/>
 
+----------
+# _DEPRECATION NOTICE_
+
+_[ACCESS-NRI](https://www.access-nri.org.au/) has taken on responsibility for ongoing support of ACCESS-OM2, so this repository is not being updated and will eventually be archived._
+
+_**New ACCESS-OM2 experiments and code development should use the latest code release from [ACCESS-NRI/ACCESS-OM2](https://github.com/ACCESS-NRI/ACCESS-OM2) and configurations from [ACCESS-NRI/access-om2-configs](https://github.com/ACCESS-NRI/access-om2-configs), and all new issues should be posted on one of those repositories.**_
+
+-----------
+
 # ACCESS-OM2
 
 ACCESS-OM2 is a global coupled ocean - sea ice model being developed by [COSIMA](http://www.cosima.org.au).
