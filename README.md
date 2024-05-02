@@ -4,7 +4,7 @@
 ----------
 # _DEPRECATION NOTICE_
 
-_ACCESS-NRI has taken on responsibility for ongoing support of ACCESS-OM2, so this repository is not being updated and will eventually be archived._
+_[ACCESS-NRI](https://www.access-nri.org.au/) has taken on responsibility for ongoing support of ACCESS-OM2, so this repository is not being updated and will eventually be archived._
 
 _**New ACCESS-OM2 experiments and code development should use the latest code release from [ACCESS-NRI/ACCESS-OM2](https://github.com/ACCESS-NRI/ACCESS-OM2) and configurations from [ACCESS-NRI/access-om2-configs](https://github.com/ACCESS-NRI/access-om2-configs), and all new issues should be posted on one of those repositories.**_
 
