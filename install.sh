@@ -80,7 +80,6 @@ source ${ACCESS_OM_DIR}/libcheck.sh
 echo
 echo "$(basename "$0") completed."
 echo
-echo "I'm testing git commits'
 
 # exit 0
 
