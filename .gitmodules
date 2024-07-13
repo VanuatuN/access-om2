@@ -1,33 +1,33 @@
 [submodule "src/mom"]
 	path = src/mom
-    url = https://github.com/VanuatuN/MOM5.git
+    url = git@github.com:VanuatuN/MOM5.git
 [submodule "src/cice5"]
 	path = src/cice5
-	url = https://github.com/VanuatuN/cice5.git
+	url = git@github.com:VanuatuN/cice5.git
 [submodule "control/1deg_jra55_ryf"]
 	path = control/1deg_jra55_ryf
-	url = https://github.com/VanuatuN/1deg_jra55_ryf.git
+	url = git@github.com:VanuatuN/1deg_jra55_ryf.git
 [submodule "control/01deg_jra55_ryf"]
 	path = control/01deg_jra55_ryf
-	url = https://github.com/VanuatuN/01deg_jra55_ryf.git
+	url = git@github.com:VanuatuN/01deg_jra55_ryf.git
 [submodule "control/025deg_jra55_ryf"]
 	path = control/025deg_jra55_ryf
-	url = https://github.com/VanuatuN/025deg_jra55_ryf.git
+	url = git@github.com:VanuatuN/025deg_jra55_ryf.git
 [submodule "tools/esmgrids"]
 	path = tools/esmgrids
-	url = https://github.com/DoublePrecision/esmgrids.git
+	url = git@github.com:DoublePrecision/esmgrids.git
 [submodule "src/libaccessom2"]
 	path = src/libaccessom2
-	url = https://github.com/VanuatuN/libaccessom2.git
+	url = git@github.com:VanuatuN/libaccessom2.git
 [submodule "control/1deg_jra55_iaf"]
 	path = control/1deg_jra55_iaf
-	url = https://github.com/VanuatuN/1deg_jra55_iaf.git
+	url = git@github.com:VanuatuN/1deg_jra55_iaf.git
 [submodule "control/01deg_jra55_iaf"]
 	path = control/01deg_jra55_iaf
-	url = https://github.com/VanuatuN/01deg_jra55_iaf.git
+	url = git@github.com:VanuatuN/01deg_jra55_iaf.git
 [submodule "control/025deg_jra55_iaf"]
 	path = control/025deg_jra55_iaf
-	url = https://github.com/VanuatuN/025deg_jra55_iaf.git
+	url = git@github.com:VanuatuN/025deg_jra55_iaf.git
 [submodule "tools/initial_conditions_access-om2"]
 	path = tools/initial_conditions_access-om2
-	url = https://github.com/VanuatuN/initial_conditions_access-om2.git
+	url = git@github.com:initial_conditions_access-om2.git
