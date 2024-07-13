@@ -30,4 +30,4 @@
 	url = git@github.com:VanuatuN/025deg_jra55_iaf.git
 [submodule "tools/initial_conditions_access-om2"]
 	path = tools/initial_conditions_access-om2
-	url = git@github.com:initial_conditions_access-om2.git
+	url = git@github.com:VanuatuN/initial_conditions_access-om2.git
