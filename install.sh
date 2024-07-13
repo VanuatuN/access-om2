@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+# this is the test to check git push 
 # Compile ACCESS-OM2 at 1, 1/4 and 1/10 degree resolution with JRA-55-do forcing
 # Andrew Kiss https://github.com/aekiss
 
