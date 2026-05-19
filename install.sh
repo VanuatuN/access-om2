@@ -22,7 +22,7 @@ if [[ -z "${ACCESS_OM_DIR}" ]]; then
 fi
 export LIBACCESSOM2_ROOT=$ACCESS_OM_DIR/src/libaccessom2
 
-declare -a exepaths=(${ACCESS_OM_DIR}/src/mom/exec/nci/${mom_type}/fms_${mom_type}.x ${LIBACCESSOM2_ROOT}/build/bin/yatm.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_360x300_24p/cice_auscom_360x300_24p.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_1440x1080_480p/cice_auscom_1440x1080_480p.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_3600x2700_722p/cice_auscom_3600x2700_722p.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_18x15.3600x2700_1682p/cice_auscom_18x15.3600x2700_1682p.exe ${ACCESS_OM_DIR}/src/mom/bin/mppnccombine.nci)
+declare -a exepaths=(${ACCESS_OM_DIR}/src/mom/exec/leo/${mom_type}/fms_${mom_type}.x ${LIBACCESSOM2_ROOT}/build/bin/yatm.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_360x300_24p/cice_auscom_360x300_24p.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_1440x1080_480p/cice_auscom_1440x1080_480p.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_3600x2700_722p/cice_auscom_3600x2700_722p.exe ${ACCESS_OM_DIR}/src/cice5/build_auscom_18x15.3600x2700_1682p/cice_auscom_18x15.3600x2700_1682p.exe ${ACCESS_OM_DIR}/src/mom/bin/mppnccombine.leo)
 # ${ACCESS_OM_DIR}/src/matm/build_nt62/matm_nt62.exe
 # ${ACCESS_OM_DIR}/src/matm/build_jra55/matm_jra55.exe
 
@@ -41,12 +41,12 @@ done
 echo
 echo "Compiling YATM file-based atmosphere and libaccessom2... "
 cd ${LIBACCESSOM2_ROOT}
-source ./build_on_gadi.sh
+source ./build_on_leo.sh
 
 echo
 echo "Compiling MOM5.1..."
 cd ${ACCESS_OM_DIR}/src/mom/exp
-./MOM_compile.csh --type $mom_type --platform nci
+./MOM_compile.csh --type $mom_type --platform leo
 
 cd ${ACCESS_OM_DIR}/src/cice5
 echo

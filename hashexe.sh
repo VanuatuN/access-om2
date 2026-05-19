@@ -21,12 +21,12 @@ if [[ -z "${mom_type}" ]]; then
 fi
 
 yatmpath=${ACCESS_OM_DIR}/src/libaccessom2/build/bin/yatm.exe
-fmspath=${ACCESS_OM_DIR}/src/mom/exec/nci/${mom_type}/fms_${mom_type}.x
+fmspath=${ACCESS_OM_DIR}/src/mom/exec/leo/${mom_type}/fms_${mom_type}.x
 cice1path=${ACCESS_OM_DIR}/src/cice5/build_auscom_360x300_24p/cice_auscom_360x300_24p.exe
 cice025path=${ACCESS_OM_DIR}/src/cice5/build_auscom_1440x1080_480p/cice_auscom_1440x1080_480p.exe
 cice010path=${ACCESS_OM_DIR}/src/cice5/build_auscom_3600x2700_722p/cice_auscom_3600x2700_722p.exe
 cice010path_18x15=${ACCESS_OM_DIR}/src/cice5/build_auscom_18x15.3600x2700_1682p/cice_auscom_18x15.3600x2700_1682p.exe
-mppnccombinepath=${ACCESS_OM_DIR}/src/mom/bin/mppnccombine.nci
+mppnccombinepath=${ACCESS_OM_DIR}/src/mom/bin/mppnccombine.leo
 
 config1ryfpath=${ACCESS_OM_DIR}/control/1deg_jra55_ryf/config.yaml
 config025ryfpath=${ACCESS_OM_DIR}/control/025deg_jra55_ryf/config.yaml
