@@ -21,6 +21,7 @@ from esmgrids.core2_grid import Core2Grid  # noqa
 from esmgrids.jra55_grid import Jra55Grid  # noqa
 from esmgrids.jra55_river_grid import Jra55RiverGrid  # noqa
 from esmgrids.daitren_runoff_grid import DaitrenRunoffGrid  # noqa
+from esmgrids.speedy_grid import SpeedyGrid
 
 """
 This script makes all of the remapping weights for ACCESS-OM2.
@@ -121,7 +122,7 @@ def create_weights(src_grid, dest_grid, npes, method,
     return regrid_weights
 
 
-def find_grid_defs(input_dir, jra55_input, core_input):
+def find_grid_defs(input_dir, jra55_input, speedy_input, core_input):
     """
     Return a dictionary containing the grid definition files.
     """
@@ -135,6 +136,7 @@ def find_grid_defs(input_dir, jra55_input, core_input):
                   os.path.join(input_dir, 'mom_01deg', 'ocean_mask.nc'))
     d['CORE2'] = os.path.join(core_input, 't_10.0001.nc')
     d['JRA55'] = os.path.join(jra55_input, 'RYF.tas.1990_1991.nc')
+    d['SPEEDY'] = os.path.join(speedy_input, 'tas_SPEEDY_1990.nc')
     d['JRA55_runoff'] = os.path.join(jra55_input,
                                      'RYF.runoff_all.1990_1991.nc')
     d['Daitren_runoff'] = os.path.join(core_input, 'runoff.daitren.clim.10FEB2011.nc')
@@ -149,11 +151,13 @@ def main():
                         The ACCESS-OM2 input directory.""")
     parser.add_argument('jra55_input', help="""
                         The JRA55 input directory.""")
+    parser.add_argument('speedy_input', help="""
+                        The SPEEDY input directory.""")                       
     parser.add_argument('core_input', help="""
                         The CORE input directory.""")
     parser.add_argument('--atm', default=None, help="""
                         Atmosphere grid to regrid from, can be one of:
-                        CORE2, JRA55, JRA55_runoff, Daitren_runoff""")
+                        CORE2, JRA55, SPEEDY, JRA55_runoff, Daitren_runoff""")
     parser.add_argument('--ocean', default=None, help="""
                         Ocean grid to regrid to, can be one of:
                         MOM1, MOM01, MOM025""")
@@ -165,8 +169,9 @@ def main():
                         action='store_true',
                         help='Ignore destination grid mask')
 
+
     args = parser.parse_args()
-    atm_options = ['JRA55', 'JRA55_runoff', 'CORE2', 'Daitren_runoff']
+    atm_options = ['JRA55', 'JRA55_runoff', 'CORE2', 'Daitren_runoff','SPEEDY']
     ocean_options = ['MOM1', 'MOM025', 'MOM01']
     method_options = ['patch', 'conserve', 'conserve2nd']
 
@@ -197,7 +202,7 @@ def main():
         import multiprocessing as mp
         args.npes = mp.cpu_count() // 2
 
-    grid_file_dict = find_grid_defs(args.input_dir, args.jra55_input, args.core_input)
+    grid_file_dict = find_grid_defs(args.input_dir, args.jra55_input, args.speedy_input, args.core_input)
 
     for ocean in args.ocean:
         umask_file = grid_file_dict[ocean][1]
@@ -211,6 +216,8 @@ def main():
                 src_grid = DaitrenRunoffGrid(grid_file_dict[atm])
             elif atm == 'JRA55':
                 src_grid = Jra55Grid(grid_file_dict[atm])
+            elif atm == 'SPEEDY':
+                src_grid = SpeedyGrid(grid_file_dict[atm])
             elif atm == 'JRA55_runoff':
                 src_grid = Jra55RiverGrid(grid_file_dict[atm], calc_areas=False)
             else:

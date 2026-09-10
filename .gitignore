@@ -11,7 +11,8 @@ tools/PET*
 tools/*.nc
 tools/contrib/esmf
 tools/contrib/bin
-
+tools/contrib/*.err
+tools/contrib/*.out
 *.swp
 input_*.tar.gz
 input
